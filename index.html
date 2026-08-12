@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember &amp; Bean — Specialty Coffee &amp; Casual Bites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo"><span class="dot"></span>Ember &amp; Bean</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#visit" class="btn btn-primary">Book a Table</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-beans"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Specialty Coffee · Casual Bites</div>
+      <h1>Slow-roasted mornings, <em>unhurried</em> afternoons.</h1>
+      <p>A neighborhood counter where the espresso is pulled to order, the fries come hot, and there's always a seat by the window for one more conversation.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-light">View the Menu</a>
+        <a href="#visit" class="btn btn-ghost" style="border-color:rgba(247,239,227,0.4); color:var(--cream);">Find Us</a>
+      </div>
+      <div class="hero-meta">
+        <div><span class="num">6:30</span><span class="lbl">Doors Open Daily</span></div>
+        <div><span class="num">100%</span><span class="lbl">Direct-Trade Beans</span></div>
+        <div><span class="num">12yrs</span><span class="lbl">On This Corner</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="ring"></div>
+      <img src="images/coffee-hero-section.png" alt="Splash of fresh coffee poured into a white cup surrounded by roasted beans">
+      <div class="hero-badge">🔥 <div><b>Fresh Roast</b><br>Tuesdays &amp; Fridays</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img-wrap reveal">
+      <img src="images/about-image.jpg" alt="Two friends laughing over coffee at an outdoor table">
+      <div class="about-tag">
+        <div class="num">02</div>
+        <p>Regulars who became family, one order at a time.</p>
+      </div>
+    </div>
+    <div class="about-copy reveal">
+      <div class="eyebrow">Our Story</div>
+      <h2>Started with one espresso machine and a stubborn idea.</h2>
+      <p>Ember &amp; Bean began as a folding table and a two-group espresso machine at the end of this same block. We roasted small, poured slow, and figured if the coffee was honest, people would find their way in.</p>
+      <p>They did — and brought their appetites with them. So the menu grew: burgers off the flat-top, fries in small batches, and desserts built for sharing. Same corner, same care, a little more on the plate.</p>
+      <div class="about-quote">
+        "We're not chasing trends. We're chasing the second cup you didn't plan on staying for."
+        <span>— Founders, Ember &amp; Bean</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We're Pouring</div>
+      <h2>The Menu</h2>
+      <p>Six counters, one kitchen. Pick a category and see what's on the board today.</p>
+    </div>
+
+    <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+      <button class="menu-tab active" data-cat="hot">Hot Beverages</button>
+      <button class="menu-tab" data-cat="cold">Cold Beverages</button>
+      <button class="menu-tab" data-cat="refresh">Refreshments</button>
+      <button class="menu-tab" data-cat="bites">Burgers &amp; Bites</button>
+      <button class="menu-tab" data-cat="dessert">Desserts</button>
+      <button class="menu-tab" data-cat="combo">Special Combos</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+
+      <div class="menu-card show" data-cat="hot">
+        <div class="cat-figure"><img src="images/hot-beverages.png" alt="Latte with heart-shaped foam art"></div>
+        <span class="cat-label">Hot · Espresso Bar</span>
+        <h4>Signature Heart Latte</h4>
+        <p>Double espresso, steamed milk poured slow, finished with our house latte-art pour.</p>
+        <div class="price-row"><span class="cat-label">Made to order</span><span class="price-tag">$4.75</span></div>
+      </div>
+      <div class="menu-card show" data-cat="hot">
+        <div class="cat-figure"><img src="images/hot-beverages.png" alt="Latte with heart-shaped foam art"></div>
+        <span class="cat-label">Hot · Espresso Bar</span>
+        <h4>Classic Espresso</h4>
+        <p>A tight, syrupy double shot. No milk, no fuss — just the bean speaking plainly.</p>
+        <div class="price-row"><span class="cat-label">Single / Double</span><span class="price-tag">$3.25</span></div>
+      </div>
+      <div class="menu-card show" data-cat="hot">
+        <div class="cat-figure"><img src="images/hot-beverages.png" alt="Latte with heart-shaped foam art"></div>
+        <span class="cat-label">Hot · Espresso Bar</span>
+        <h4>Cappuccino</h4>
+        <p>Equal parts espresso, steamed milk, and microfoam, dusted with cocoa on request.</p>
+        <div class="price-row"><span class="cat-label">Made to order</span><span class="price-tag">$4.25</span></div>
+      </div>
+
+      <div class="menu-card" data-cat="cold">
+        <div class="cat-figure"><img src="images/cold-beverages.png" alt="Two tall glasses of iced coffee with cream"></div>
+        <span class="cat-label">Cold · Iced Bar</span>
+        <h4>Iced Caramel Macchiato</h4>
+        <p>Cold milk, vanilla syrup, a shot of espresso dropped through, caramel drizzled over ice.</p>
+        <div class="price-row"><span class="cat-label">16oz</span><span class="price-tag">$5.25</span></div>
+      </div>
+      <div class="menu-card" data-cat="cold">
+        <div class="cat-figure"><img src="images/cold-beverages.png" alt="Two tall glasses of iced coffee with cream"></div>
+        <span class="cat-label">Cold · Iced Bar</span>
+        <h4>Slow Cold Brew</h4>
+        <p>Steeped eighteen hours, poured over ice. Smooth, low-acid, quietly strong.</p>
+        <div class="price-row"><span class="cat-label">16oz</span><span class="price-tag">$4.50</span></div>
+      </div>
+      <div class="menu-card" data-cat="cold">
+        <div class="cat-figure"><img src="images/cold-beverages.png" alt="Two tall glasses of iced coffee with cream"></div>
+        <span class="cat-label">Cold · Iced Bar</span>
+        <h4>Iced Vanilla Latte</h4>
+        <p>Espresso over vanilla-steeped milk and ice, light and easy for warm afternoons.</p>
+        <div class="price-row"><span class="cat-label">16oz</span><span class="price-tag">$4.95</span></div>
+      </div>
+
+      <div class="menu-card" data-cat="refresh">
+        <div class="cat-figure"><img src="images/refreshment.png" alt="Strawberry mint sparkling cooler with ice"></div>
+        <span class="cat-label">Refreshments</span>
+        <h4>Strawberry Mint Cooler</h4>
+        <p>Muddled strawberries, fresh mint, soda water — bright, cold, no coffee in sight.</p>
+        <div class="price-row"><span class="cat-label">16oz</span><span class="price-tag">$4.50</span></div>
+      </div>
+      <div class="menu-card" data-cat="refresh">
+        <div class="cat-figure"><img src="images/refreshment.png" alt="Strawberry mint sparkling cooler with ice"></div>
+        <span class="cat-label">Refreshments</span>
+        <h4>Citrus Basil Fizz</h4>
+        <p>Fresh-squeezed citrus, torn basil, sparkling water over ice.</p>
+        <div class="price-row"><span class="cat-label">16oz</span><span class="price-tag">$4.25</span></div>
+      </div>
+      <div class="menu-card" data-cat="refresh">
+        <div class="cat-figure"><img src="images/refreshment.png" alt="Strawberry mint sparkling cooler with ice"></div>
+        <span class="cat-label">Refreshments</span>
+        <h4>Peach Iced Tea</h4>
+        <p>Black tea steeped with real peach, served over ice with a wedge on the rim.</p>
+        <div class="price-row"><span class="cat-label">16oz</span><span class="price-tag">$3.75</span></div>
+      </div>
+
+      <div class="menu-card" data-cat="bites">
+        <div class="cat-figure"><img src="images/burger-frenchfries.png" alt="Cheeseburger stacked high with lettuce and tomato, fries beside it"></div>
+        <span class="cat-label">Kitchen · Flat-top</span>
+        <h4>The Ember Burger</h4>
+        <p>Smash patty, aged cheddar, crispy onions, house sauce, toasted brioche, side of fries.</p>
+        <div class="price-row"><span class="cat-label">Comes with fries</span><span class="price-tag">$9.50</span></div>
+      </div>
+      <div class="menu-card" data-cat="bites">
+        <div class="cat-figure"><img src="images/burger-frenchfries.png" alt="Cheeseburger stacked high with lettuce and tomato, fries beside it"></div>
+        <span class="cat-label">Kitchen · Flat-top</span>
+        <h4>Loaded Fries</h4>
+        <p>Hand-cut fries, melted cheddar, house sauce, scallion, a pinch of chili flake.</p>
+        <div class="price-row"><span class="cat-label">Side / Sharer</span><span class="price-tag">$5.50</span></div>
+      </div>
+
+      <div class="menu-card" data-cat="dessert">
+        <div class="cat-figure"><img src="images/desserts.png" alt="Bowl of whipped cream and fresh strawberries"></div>
+        <span class="cat-label">Dessert Counter</span>
+        <h4>Strawberry Cream Bowl</h4>
+        <p>Fresh strawberries, softly whipped cream, a touch of vanilla sugar.</p>
+        <div class="price-row"><span class="cat-label">Serves 1–2</span><span class="price-tag">$5.75</span></div>
+      </div>
+      <div class="menu-card" data-cat="dessert">
+        <div class="cat-figure"><img src="images/desserts.png" alt="Bowl of whipped cream and fresh strawberries"></div>
+        <span class="cat-label">Dessert Counter</span>
+        <h4>Chocolate Torte</h4>
+        <p>Dense and dark, baked in small batches, served just barely warm.</p>
+        <div class="price-row"><span class="cat-label">Slice</span><span class="price-tag">$6.25</span></div>
+      </div>
+
+      <div class="menu-card" data-cat="combo">
+        <div class="cat-figure"><img src="images/special-combo.png" alt="Combo tray with burgers, hot dog, fries, and a drink"></div>
+        <span class="cat-label">Special Combo</span>
+        <h4>Bean &amp; Bite Combo</h4>
+        <p>Ember Burger, hand-cut fries, a grilled hot dog, and a fountain drink of your choice.</p>
+        <div class="price-row"><span class="cat-label">Feeds 1, generously</span><span class="price-tag">$12.50</span></div>
+      </div>
+      <div class="menu-card" data-cat="combo">
+        <div class="cat-figure"><img src="images/special-combo.png" alt="Combo tray with burgers, hot dog, fries, and a drink"></div>
+        <span class="cat-label">Special Combo</span>
+        <h4>Rush Hour Combo</h4>
+        <p>Any hot or iced coffee paired with a slice of the day — built for the walk to work.</p>
+        <div class="price-row"><span class="cat-label">Weekdays 7–10am</span><span class="price-tag">$10.75</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow">From The Counter</div>
+      <h2 style="color:var(--cream);">A Look Inside</h2>
+      <p>What's actually leaving the kitchen this week.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item g-tall"><img src="images/gallery-1.jpg" alt="Steaming cup of black coffee with beans scattered around"><span class="gallery-cap">Morning Pour</span></div>
+      <div class="gallery-item"><img src="images/gallery-2.jpg" alt="Breakfast plate with sausages, fried eggs, and grilled vegetables"><span class="gallery-cap">Garden Breakfast Plate</span></div>
+      <div class="gallery-item g-wide"><img src="images/gallery-3.jpg" alt="Three fruit smoothies in tall glasses"><span class="gallery-cap">Fruit &amp; Cream Smoothies</span></div>
+      <div class="gallery-item"><img src="images/gallery-4.jpg" alt="Heart-shaped breakfast plate with fried egg and coffee"><span class="gallery-cap">Made With Love</span></div>
+      <div class="gallery-item"><img src="images/gallery-5.jpg" alt="Folded quesadilla with spiced potato filling and dips"><span class="gallery-cap">Spiced Potato Quesadilla</span></div>
+      <div class="gallery-item g-tall"><img src="images/gallery-6.jpg" alt="Croissant with honey drizzle beside a cup of coffee"><span class="gallery-cap">Croissant &amp; Honey</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Word On The Street</div>
+      <h2>What Regulars Say</h2>
+    </div>
+    <div class="test-scroll reveal">
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p>"I moved across town and I still come back here for my Saturday latte. Some habits aren't worth breaking."</p>
+        <div class="test-person"><img src="images/user-1.jpg" alt="Priya N."><div><h5>Priya N.</h5><span>Regular since 2021</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p>"The cold brew doesn't taste burnt or bitter like most places. You can tell someone actually times the steep."</p>
+        <div class="test-person"><img src="images/user-2.jpg" alt="Marcus T."><div><h5>Marcus T.</h5><span>Local roaster fan</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p>"Walked in for a coffee, left with the Ember Burger too. Didn't regret either decision."</p>
+        <div class="test-person"><img src="images/user-3.jpg" alt="Daniel K."><div><h5>Daniel K.</h5><span>First-time visitor</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p>"My weekend isn't official until I've had the strawberry cream bowl and a window seat here."</p>
+        <div class="test-person"><img src="images/user-4.jpg" alt="Ava R."><div><h5>Ava R.</h5><span>Weekend regular</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p>"Good wifi, better coffee, and nobody rushes you off the corner table. My unofficial office."</p>
+        <div class="test-person"><img src="images/user-5.jpg" alt="Leo M."><div><h5>Leo M.</h5><span>Remote worker</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow" style="justify-content:center; color:var(--rust);">Come Say Hello</div>
+      <h2>Save us a seat by the window.</h2>
+      <p>Walk-ins welcome, but a reservation means your table's ready when you are.</p>
+      <a href="#" class="btn btn-primary">Reserve a Table</a>
+    </div>
+    <div class="visit-info reveal">
+      <div><div class="lbl">Address</div><div class="val">142 Corner Street, Delhi</div></div>
+      <div><div class="lbl">Hours</div><div class="val">Mon–Sun, 6:30am – 9pm</div></div>
+      <div><div class="lbl">Phone</div><div class="val">+91 98765 43210</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="logo"><span class="dot"></span>Ember &amp; Bean</a>
+        <p>A neighborhood coffee counter and kitchen. Slow-roasted, hand-poured, and always up for one more order.</p>
+        <div class="footer-form">
+          <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+          <button type="button">Join</button>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Menu</h5>
+        <ul>
+          <li><a href="#menu">Hot Beverages</a></li>
+          <li><a href="#menu">Cold Beverages</a></li>
+          <li><a href="#menu">Burgers &amp; Bites</a></li>
+          <li><a href="#menu">Desserts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <ul>
+          <li>142 Corner Street, Delhi</li>
+          <li>Mon–Sun, 6:30am – 9pm</li>
+          <li>+91 98765 43210</li>
+          <li>hello@emberandbean.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ember &amp; Bean. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Twitter">TW</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
